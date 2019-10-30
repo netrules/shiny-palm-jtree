@@ -1,0 +1,6 @@
+mserver\recollector.class
+mserver\_recollectorStub.class
+mserver\recollectorHelper.class
+mserver\recollectorHolder.class
+mserver\recollectorOperations.class
+mserver\recollectorPOA.class

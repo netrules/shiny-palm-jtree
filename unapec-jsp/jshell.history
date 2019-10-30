@@ -1,0 +1,3 @@
+EXPRESSION#>mvn
+VAR#>mvn dependency:tree -Dverbose -Dincludes=commons-collections
+VAR#>mvn dependency:tree -Dverbose -Dincludes=commons-collections;

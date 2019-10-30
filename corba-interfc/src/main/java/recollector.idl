@@ -1,0 +1,9 @@
+module mserver {
+
+    interface recollector{ 
+        
+        string undo();
+        void keep(in string description, in string category);
+        
+    }; 
+};

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.unapec</groupId>
+    <artifactId>unapec-jsp-mserver</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>13</maven.compiler.source>
+        <maven.compiler.target>13</maven.compiler.target>
+        <corba.path>C:/Users/thisi/Desktop/tareas/Java/corba-interfc/target/corba-interfc-1.0-SNAPSHOT.jar</corba.path>
+    </properties>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.jboss/jnpserver -->
+        <dependency>
+                <groupId>jboss</groupId>
+                <artifactId>jnpserver</artifactId>
+                <version>4.2.2.GA</version>
+        </dependency>
+        <dependency>
+                <groupId>jboss</groupId>
+                <artifactId>jbossall-client</artifactId>
+                <version>4.2.2.GA</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>5.15.10</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20190722</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+                <!-- http://roufid.com/3-ways-to-add-local-jar-to-maven-project/ -->
+                <!-- https://www.mkyong.com/maven/how-to-create-user-defined-properties-in-maven/ -->
+                <groupId>mserver</groupId>
+                <artifactId>mserver</artifactId>
+                <version>1.0</version>
+                <scope>system</scope>
+                <systemPath>${corba.path}</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.corba</groupId>
+            <artifactId>glassfish-corba-omgapi</artifactId>
+            <version>3.2.0-b005</version>
+        </dependency>
+    </dependencies>
+</project>

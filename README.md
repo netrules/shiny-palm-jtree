@@ -11,6 +11,7 @@ Project using JSP and Servlet with different functions.
 		>
 		> start java HelloServer -ORBInitialPort 1050 -ORBInitialHost localhost
 		>
-		> java HelloClient -ORBInitialPort 1050 -ORBInitialHost localhost
+		> java HelloClient -ORBInitialPort 1050 -ORBInitialHost localhost	
+	- Apache ActiveMQ might be necessary for some things.
 		
 Etc libraries are self explanatory or can be investigated. Good luck.

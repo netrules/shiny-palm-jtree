@@ -22,12 +22,17 @@ import javax.persistence.Table;
  */
 @Entity(name="Todos")
 @Table(name="Todos")
-@NamedQueries({@NamedQuery(name = "TodoEntity.getAll", query = "SELECT t FROM Todos AS t")})
+@NamedQueries({
+    @NamedQuery(name="TodoEntity.getAll", query="SELECT t FROM Todos AS t"),
+    @NamedQuery(name="TodoEntity.findByPrimaryKey",
+            query="SELECT t FROM Todos t WHERE t.id = :id")
+})
 public class TodoEntity implements Serializable {
 
     // http://zetcode.com/java/ejb/
     
     public static final String GET_ALL_QUERY_NAME = "TodoEntity.getAll";
+    public static final String GET_ONE_QUERY_BYID = "TodoEntity.findByPrimaryKey";
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

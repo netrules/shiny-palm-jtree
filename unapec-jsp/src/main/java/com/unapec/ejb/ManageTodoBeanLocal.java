@@ -16,6 +16,7 @@ import javax.persistence.EntityManager;
  */
 @Local
 public interface ManageTodoBeanLocal {
+    void removeTodoById(Long id);
     void removeTodo(TodoEntity todo);
     void saveTodo(TodoEntity todo);
     void setOwner(Long owner);

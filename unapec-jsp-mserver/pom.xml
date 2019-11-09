@@ -7,9 +7,8 @@
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>13</maven.compiler.source>
-        <maven.compiler.target>13</maven.compiler.target>
-        <corba.path>C:/Users/thisi/Desktop/tareas/Java/corba-interfc/target/corba-interfc-1.0-SNAPSHOT.jar</corba.path>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.jboss/jnpserver -->
@@ -38,15 +37,6 @@
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
             <type>jar</type>
-        </dependency>
-        <dependency>
-                <!-- http://roufid.com/3-ways-to-add-local-jar-to-maven-project/ -->
-                <!-- https://www.mkyong.com/maven/how-to-create-user-defined-properties-in-maven/ -->
-                <groupId>mserver</groupId>
-                <artifactId>mserver</artifactId>
-                <version>1.0</version>
-                <scope>system</scope>
-                <systemPath>${corba.path}</systemPath>
         </dependency>
         <dependency>
             <groupId>com.sun.corba</groupId>

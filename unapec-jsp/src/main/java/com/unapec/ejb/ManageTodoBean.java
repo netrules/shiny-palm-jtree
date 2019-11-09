@@ -66,6 +66,16 @@ public class ManageTodoBean implements ManageTodoBeanLocal {
     public void setOwner(Long owner) {
         this.owner = owner;
     }
+    
+    @Override
+    public void removeTodoById(Long id) {
+        EntityManager em = getCurrentInstance();
+        TodoEntity ref = em.getReference(TodoEntity.class, id);
+        
+        em.getTransaction().begin();
+        em.remove(ref);
+        em.getTransaction().commit();
+    }
 
     @Override
     public void removeTodo(TodoEntity todo) {
@@ -91,7 +101,10 @@ public class ManageTodoBean implements ManageTodoBeanLocal {
     @Override
     public TodoEntity getTodo(Long id) {
         EntityManager em = getCurrentInstance();
-        TodoEntity todo = em.find(TodoEntity.class, id);
+//        TodoEntity todo = em.find(TodoEntity.class, id);
+        TodoEntity todo = (TodoEntity) em.createNamedQuery(TodoEntity.GET_ONE_QUERY_BYID, TodoEntity.class).setParameter("id", id)
+          .getSingleResult();
+        System.out.println(todo);
         return todo;
     }
     
